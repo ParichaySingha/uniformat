@@ -1,0 +1,147 @@
+.footer {
+  background-color: #232f3e;
+  color: #dddddd;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #3a4553;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footerCont1 {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  flex: 1;
+}
+
+.contentFooterTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.contentFooterSubTitlediv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contentFooterSubTitleCont {
+  font-size: 14px;
+  color: #dddddd;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.contentFooterSubTitleCont:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+.amazonImgContainer {
+  padding-top: 20px;
+  border-top: 1px solid #83810f;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.amazonImgFooter {
+  width: 500px;
+  height: 70px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footerCont1 {
+    min-width: unset;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contentFooterSubTitlediv {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .contentFooterTitle {
+    font-size: 15px;
+  }
+
+  .contentFooterSubTitleCont {
+    font-size: 13px;
+  }
+}
+
+/* ...existing code... */
+
+.socialIconsContainer {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.facebookIconFooter,
+.instagramIconFooter,
+.twitterIconFooter {
+  font-size: 2rem; /* Responsive size */
+  color: #dddddd;
+  transition: color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.facebookIconFooter:hover {
+  color: #4267B2;
+  transform: scale(1.15);
+}
+.instagramIconFooter:hover {
+  color: #E1306C;
+  transform: scale(1.15);
+}
+.twitterIconFooter:hover {
+  color: #1DA1F2;
+  transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .socialIconsContainer {
+    gap: 10px;
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .facebookIconFooter,
+  .instagramIconFooter,
+  .twitterIconFooter {
+    font-size: 1.5rem;
+  }
+}
+/* ...existing code... */
