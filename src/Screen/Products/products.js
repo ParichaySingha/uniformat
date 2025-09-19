@@ -1,123 +1,101 @@
-import React from "react";
+import React, { useState } from "react";
 import "./products.css";
-import StarRateIcon from "@mui/icons-material/StarRate";
-import StarHalfIcon from "@mui/icons-material/StarHalf";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
+
 import productDetail from "./products.json";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions/actions";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import StarIcon from "@mui/icons-material/Star";
+
+const categories = [
+  "Housekeeping",
+  "FCB/GSA/Waiter",
+  "Housekeeping Uniform",
+  "Front Office",
+  "Spa Uniform",
+  "Bell Boy",
+  "Valet Uniform",
+  "Hostess",
+  "Security Guard",
+  "Back Office",
+];
 
 const Products = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  // Filter products based on selected category
+  const filteredProducts = selectedCategory
+    ? productDetail.product.filter((item) => item.category === selectedCategory)
+    : productDetail.product;
+  // const cartItems = useSelector((state) => state.cart.items);
+  const handleAddToCart = (item) => {
+    toast.success("Added To Cart", {
+      position: "bottom-right",
+    });
+    dispatch(addToCart(item));
+  };
+
+  // Add handleProductClick
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="productPage">
       <div className="productTopBanner">
         <div className="productTopBannerItems">Hotel/Hospitality</div>
-        <div className="productTopBannerItemsSubMenu">Housekeeping</div>
-        <div className="productTopBannerItemsSubMenu">Maintenance</div>
-        <div className="productTopBannerItemsSubMenu">FCB/GSA/Waiter</div>
-        <div className="productTopBannerItemsSubMenu">Front Office</div>
-        <div className="productTopBannerItemsSubMenu">Spa</div>
-        <div className="productTopBannerItemsSubMenu">Bell Boy</div>
-        <div className="productTopBannerItemsSubMenu">Valet</div>
-        <div className="productTopBannerItemsSubMenu">Hostess</div>
-        <div className="productTopBannerItemsSubMenu">Security Guard</div>
-        <div className="productTopBannerItemsSubMenu">Back Office</div>
       </div>
 
       <div className="productsPageMain">
         <div className="productsPageMainLeftCategory">
-          <div className="productsPageLeftCategoryTitle">Category</div>
+          <div className="productsPageLeftCategoryTitle">Shop By Category</div>
           <div className="productsPageMainLeftCategoryContent">
-            <div className="productsPageMainLeftCategoryTitleContent">
-              Computers & Accessory
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Mackbooks
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Maintenance Uniformat
-            </div>
-
-            <div className="ratingLeftBox">
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarBorderIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <div className="andUp">& Up</div>
-            </div>
-
-            <div className="ratingLeftBox">
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarBorderIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <div className="andUp">& Up</div>
-            </div>
-
-            <div className="ratingLeftBox">
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarRateIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarBorderIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <div className="andUp">& Up</div>
-            </div>
-
-            <div className="ratingLeftBox">
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <StarHalfIcon sx={{ fontSize: "20px", color: "#febd69" }} />
-              <div className="andUp">& Up</div>
-            </div>
-
-            <div className="productsPageMainLeftCategoryContentSub">
-              Housekeeping Uniform
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Maintenance
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Kitchen
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              FCB/GSA/Waiter
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Front Office
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Spa Uniform
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Bell Boy
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">Valet</div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Hostess
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Security Guard
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Back Office
+            {categories.map((cat) => (
+              <div
+                key={cat}
+                className={`productsPageMainLeftCategoryContentSub${
+                  selectedCategory === cat ? " active" : ""
+                }`}
+                onClick={() => setSelectedCategory(cat)}
+                style={{ cursor: "pointer" }}
+              >
+                {cat}
+              </div>
+            ))}
+            <div
+              className={`productsPageMainLeftCategoryContentSub${
+                selectedCategory === null ? " active" : ""
+              }`}
+              onClick={() => setSelectedCategory(null)}
+              style={{ cursor: "pointer", color: "#febd69" }}
+            >
+              All
             </div>
           </div>
         </div>
 
         <div className="productPageMainRight">
           <div className="productPageMainRightTopBanner">
-            1-5 of 5 results for{" "}
+            {`1-${productDetail.product.length} of ${productDetail.product.length} results for `}
             <span className="productsPageMainRightTopBannerSpan">
               Hotel/Hospitality
             </span>
           </div>
 
           <div className="itemsImageProductPage">
-            {productDetail.product.map((item, index) => {
+            {filteredProducts.map((item, index) => {
               return (
-                <div className="imtemImageProductPageOne" key={item.id}>
+                <div
+                  className="imtemImageProductPageOne"
+                  key={item.id}
+                  onClick={() => handleProductClick(item.id)}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="imgBlockItemsImageProductPageOne">
                     <img
                       className="productImageProduct"
@@ -127,28 +105,36 @@ const Products = () => {
                   </div>
                   <div className="productNameproduct">
                     <div>{item.name}</div>
-                    <div className="productNameProductRating">
-                      <StarRateIcon
-                        sx={{ fontSize: "20px", color: "#febd69" }}
-                      />
-                      <StarRateIcon
-                        sx={{ fontSize: "20px", color: "#febd69" }}
-                      />
-                      <StarRateIcon
-                        sx={{ fontSize: "20px", color: "#febd69" }}
-                      />
-                      <StarHalfIcon
-                        sx={{ fontSize: "20px", color: "#febd69" }}
-                      />
-                      <StarBorderIcon
-                        sx={{ fontSize: "20px", color: "#febd69" }}
-                      />
+                    <div
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        background: "#22c55e", // green
+                        color: "#fff",
+                        borderRadius: "20px",
+                        padding: "2px 10px",
+                        fontWeight: 600,
+                        fontSize: "16px",
+                        gap: "4px",
+                        width: "fit-content",
+                      }}
+                    >
+                      4.6
+                      <StarIcon style={{ fontSize: "18px", color: "#fff" }} />
                     </div>
                     <div className="priceProductDetailsPage">
                       <div className="currencyText">₹</div>
                       <div className="rateHomeDetail">
                         <div className="rateHomeDetailsPrice">{item.price}</div>
-                        <div className="addTobasketBtn">Add To Cart</div>
+                        <div
+                          className="addTobasketBtn"
+                          onClick={(e) => {
+                            e.stopPropagation(); // Prevents navigation when clicking Add to Cart
+                            handleAddToCart(item);
+                          }}
+                        >
+                          Add To Cart
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -158,6 +144,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

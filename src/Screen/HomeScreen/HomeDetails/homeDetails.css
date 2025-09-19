@@ -1,85 +1,151 @@
 .homeDetails {
-  width: 100%;
-  padding: 20px;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  background-color: rgb(238, 235, 235);
+  padding: 32px;
+  background: #f6f7fb;
+  min-height: 100vh;
 }
 
 .homeDetailsLongCard {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 15px;
-  background-color: white;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  margin-bottom: 32px;
+  padding: 24px;
 }
 
 .homeDetailsLongCardTitle {
-  font-size: 21px;
-  font-weight: 600;
-}
-
-.homeDetailsLongCardItems {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 10px 0;
-  overflow: hidden;
-}
-
-.scrollDiv {
-  display: flex;
-  width: 100%;
-  gap: 15px;
-  overflow-x: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #22223b;
 }
 
 .homeDetailsLongCardItem {
-  display: flex;
-  flex-shrink: 0;
-  cursor: pointer;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin: 0 8px;
+  transition: transform 0.2s;
+  display: flex !important;
   flex-direction: column;
-  width: 17%;
   align-items: center;
-  box-sizing: border-box;
-  padding: 10px;
-  background-color: rgb(247, 247, 247);
+}
+
+.homeDetailsLongCardItem:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 }
 
 .homeDetailsLongCardItemImg {
-  width: 60%;
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fff;
 }
 
 .homeDetailsLongCardItemImgDetail {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  text-align: center;
 }
 
 .homeDetailsLongCardItemImgTopDetail {
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .homeDetailsPercentageOff {
-  padding: 4px 6px;
-  background-color: #CC0C39;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 2px;
-  color: white;
+  background: #ffb703;
+  color: #fff;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
+.slick-arrow {
+  background: #fff;
+  /* border-radius: 10%; */
+  border: 1px solid #cccccc;
+  width: 36px;
+  height: 250px;
+  z-index: 2;
+}
+.slick-arrow:before {
+  color: #85d4d4;
+  font-size: 24px;
+}
+
 .limitedTimeDealHomeDetails {
-  font-size: 12px;
-  display: flex;
-  align-items: center;
+  background: #27291a;
+  color: #fff;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
 
 .bottomHomeDetails {
-  font-size: 12px;
-  padding: 2px 0;
+  font-size: 1rem;
+  color: #22223b;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Slick carousel overrides */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.slick-dots li button:before {
+  color: #2196f3;
+}
+
+/* Add to: c:\Uniformat\uniformat\src\Screen\HomeScreen\HomeDetails\homeDetails.css */
+.whyChooseSection {
+  background: #d2f1f7;
+  padding: 32px 0;
+  margin-top: 32px;
+  text-align: center;
+}
+.whyChooseTitle {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.whyChooseCards {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.whyChooseCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 16px;
+  width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.whyChooseImg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+.whyChooseCardTitle {
+  color: #e53935;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+.whyChooseCardDesc {
+  color: #333;
+  font-size: 1rem;
 }

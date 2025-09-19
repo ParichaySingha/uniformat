@@ -1,47 +1,201 @@
 {
-    "product": [
-        
-        {
-            "id": "2",
-            "name": "boAt Airdopes 141 Bluetooth TWS Earbuds with 42H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistanc...",
-            "price": 1299,
-            "quantity": 1,
-            "imageUrl": "https://m.media-amazon.com/images/I/819Mwk53CSL._AC_UL480_FMwebp_QL65_.jpg"
-        },
-        {
-            "id": "3",
-            "name": "boAt Immortal 121 in Ear TWS Earbuds with Beast Mode(40ms Low Latency) for Gaming, 40H Playtime, Blazing LEDs, Quad Mics...",
-            "price": 999,
-            "quantity": 1,
-            "imageUrl": "https://m.media-amazon.com/images/I/61q-2yzbBtL._AC_UL480_QL65_.jpg"
-        },
-        {
-            "id": "4",
-            "name": "Iphone 121 in Ear TWS Earbuds with Beast Mode(40ms Low Latency) for Gaming, 40H Playtime, Blazing LEDs, Quad Mics ENx Sign...",
-            "price": 79999,
-            "quantity": 1,
-            "imageUrl": "https://m.media-amazon.com/images/I/71v2jVh6nIL._AC_UY327_FMwebp_QL65_.jpg"
-        },
-        {
-            "id": "5",
-            "name": "Xiaomi Pad 6| Qualcomm Snapdragon 870| Powered by HyperOS | 144Hz Refresh Rate| 6GB, 128GB| 2.8K+ Display ...",
-            "price": 24999,
-            "quantity": 1,
-            "imageUrl": "https://m.media-amazon.com/images/I/71LRY1j6UHL._AC_UY327_FMwebp_QL65_.jpg"
-        },
-        {
-            "id": "1",
-            "name": "HP Victus Gaming Laptop, 12th Gen Intel Core i5-12450H, 4GB RTX 3050 GPU, 15.6-inch (39.6 cm) FHD IPS 144Hz, 16GB DDR4, 512GB...",
-            "price": 67999,
-            "quantity": 1,
-            "imageUrl": "https://m.media-amazon.com/images/I/81+xD-8WwXL._AC_UL480_FMwebp_QL65_.jpg"
-        },
-         {
-            "id": "6",
-            "name": "HP Victus Gaming Laptop, 12th Gen Intel Core i5-12450H, 4GB RTX 3050 GPU, 15.6-inch (39.6 cm) FHD IPS 144Hz, 16GB DDR4, 512GB...",
-            "price": 67999,
-            "quantity": 1,
-            "imageUrl": "https://m.media-amazon.com/images/I/81Y4N0HmVwL._AC_UL480_FMwebp_QL65_.jpg"
-        }
-    ]
+  "product": [
+    {
+      "id": "1",
+      "name": "These uniforms ensure hygiene, comfort, and a polished appearance while performing physically active tasks.",
+      "price": 899,
+      "category": "Housekeeping",
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/premium-photo/modern-black-housekeeping-uniform-men-designed-hotel-staff-use-generative-ai_166669-19771.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/free-vector/staff-uniform-vectors_23-2147690154.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "These uniforms ensure hygiene, comfort, and a polished appearance while performing physically active tasks.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "2",
+      "name": "These uniforms are built to handle tough, hands-on tasks while maintaining a safe, clean, and professional appearance.",
+      "price": 799,
+      "category": "Housekeeping",
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/premium-photo/halfbody-shot-worker-dark-blue-longsleeve-uniform_1106493-223571.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/free-vector/staff-uniform-vectors_23-2147690154.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "These uniforms are built to handle tough, hands-on tasks while maintaining a safe, clean, and professional appearance.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "3",
+      "name": "They are designed to offer a clean, crisp, and presentable appearance while being comfortable and functional for long shifts.",
+      "price": 999,
+      "category": "Housekeeping",
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/premium-vector/3d-realistic-soccer-jersey-barcelona-style-football-shirt-template_97886-31029.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/free-vector/staff-uniform-vectors_23-2147690154.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "They are designed to offer a clean, crisp, and presentable appearance while being comfortable and functional for long shifts.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "4",
+      "name": "These uniforms are designed to reflect professionalism, confidence, and hospitality—as the front office is the face of the brand.",
+      "price": 599,
+      "category": "Housekeeping",
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/free-vector/staff-uniform-vectors_23-2147690154.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/free-vector/staff-uniform-vectors_23-2147690154.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "These uniforms are designed to reflect professionalism, confidence, and hospitality—as the front office is the face of the brand.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "5",
+      "name": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "price": 999,
+      "category": "Housekeeping",
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/free-photo/vegetable-salad-ornated-with-chips_140725-1249.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/free-photo/vegetable-salad-ornated-with-chips_140725-1249.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "6",
+      "name": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "price": 999,
+      "quantity": 1,
+      "imageUrl": "https://uniformtailor.in/image/cache/catalog/data/Hospitality%20Uniforms/Chef%20Jacket/blue-chef-jacket-670x760.jpg",
+      "images": [
+        "https://uniformtailor.in/image/cache/catalog/data/Hospitality%20Uniforms/Chef%20Jacket/blue-chef-jacket-670x760.jpg"
+      ],
+      "description": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "7",
+      "name": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "price": 999,
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/premium-photo/woman-is-standing-sculpture-this-outdoor-scene-chic-spa-uniforms-staff-therapists_538213-129237.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/premium-photo/woman-is-standing-sculpture-this-outdoor-scene-chic-spa-uniforms-staff-therapists_538213-129237.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "8",
+      "name": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "price": 999,
+      "quantity": 1,
+      "imageUrl": "https://img.freepik.com/premium-photo/pilot-air-hostess_981168-3558.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740",
+      "images": [
+        "https://img.freepik.com/premium-photo/pilot-air-hostess_981168-3558.jpg?uid=R200540322&ga=GA1.1.995393516.1744188710&semt=ais_hybrid&w=740"
+      ],
+      "description": "These uniforms are meant to reflect serenity, hygiene, and professionalism while offering maximum comfort and mobility during treatments.",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
+        "#808080",
+        "#00FFFF"
+      ],
+      "sizes": ["S", "M", "L", "XL"]
+    }
+  ]
 }

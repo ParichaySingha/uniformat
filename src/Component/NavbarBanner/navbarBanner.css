@@ -1,17 +1,25 @@
-.navbarBanner{
+.navbarBanner {
     background-color: #232f3e;
-    
     padding: 0 0 0 11px;
     display: flex;
-    height: 45px;
+    height: 50px;
     justify-content: space-between;
     color: white;
+    align-items: center;
+    position: relative;
+    z-index: 1100;
 }
 
-.navbarBannerOptionsLeft{
+.navbarBannerOptionsLeft {
     display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-.optionsNavbarBanner{
+.navbarBannerOptionsLeft::-webkit-scrollbar {
+    display: none;
+}
+.optionsNavbarBanner {
     display: flex;
     padding: 8px 9px;
     justify-content: center;
@@ -19,21 +27,185 @@
     color: white;
     align-items: center;
     cursor: pointer;
-    &:hover{
-        border: 1px solid;
-        border-radius: 3px;
-    }
+    white-space: nowrap;
+    transition: background 0.2s;
 }
-.allOptionsNavbarBanner{
+.optionsNavbarBanner:hover {
+    border: 1px solid;
+    border-radius: 3px;
+    background: #37475a;
+}
+.allOptionsNavbarBanner {
     font-size: 14px;
     padding-left: 5px;
     font-weight: 400;
 }
 
-.navbarBannerRightSide{
-    &:hover{
-        border: 1px solid;
-        border-radius: 2px;
-        cursor: pointer;
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 90vw;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    z-index: 2000;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    overflow-y: auto;
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+.sidebarHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background: #DED78F;
+    color: #fff;
+}
+.sidebarSections {
+    padding: 0;
+}
+.sidebarSection {
+    padding: 0;
+}
+.sidebarSectionHeader {
+    font-weight: bold;
+    padding: 16px 24px 8px 24px;
+    font-size: 1.05em;
+    color: #111;
+    background: #f6f6f6;
+}
+.sidebarGreeting {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 5px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background: #232f3e;
+    color: #fff;
+    cursor: pointer;
+}
+.sidebarGreeting:hover {
+    border: 1px solid;
+    border-radius: 3px;
+    background: #37475a;
+}
+.sidebarGreetingIcon {
+    margin-right: 10px;
+    font-size: 1.3em;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.sidebarOptionRow {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    cursor: pointer;
+    background: #fff;
+    transition: background 0.2s;
+}
+.sidebarOptionRow:hover {
+    background: #c6d5dc;
+}
+.sidebarOption {
+    flex: 1;
+    color: #111;
+    text-decoration: none;
+    font-size: 1em;
+}
+.sidebarChevron {
+    color: #000000;
+    font-size: 1.2em !important;
+}
+.hasSubmenu .sidebarOption {
+    font-weight: 500;
+}
+.sidebarDivider {
+    height: 1px;
+    background: #eee;
+    margin: 8px 0;
+}
+.sidebarOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 1999;
+}
+.mainmanu {
+    font-weight: 400;
+}
+.sidebar,
+.sidebarSection,
+.sidebarSectionHeader,
+.sidebarOptionRow,
+.sidebarOption,
+.mainmanu {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .navbarBanner {
+        height: 46px;
+        padding: 0 0 0 4px;
     }
+    .allOptionsNavbarBanner {
+        font-size: 13px;
+        padding-left: 3px;
+    }
+    .sidebar {
+        width: 80vw;
+        max-width: 350px;
+    }
+}
+@media (max-width: 600px) {
+    .navbarBanner {
+        height: 44px;
+        padding: 0 0 0 2px;
+    }
+    .navbarBannerOptionsLeft {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0;
+    }
+    .optionsNavbarBanner {
+        padding: 7px 7px;
+        font-size: 12px;
+    }
+    .allOptionsNavbarBanner {
+        font-size: 12px;
+        padding-left: 2px;
+    }
+    .sidebar {
+        width: 50vw;
+        max-width: 100vw;
+    }
+    .sidebarHeader {
+        padding: 8px;
+    }
+    .sidebarSectionHeader {
+        padding: 12px 16px 6px 16px;
+        font-size: 1em;
+    }
+    .sidebarOptionRow {
+        padding: 9px 16px;
+        font-size: 0.98em;
+    }
+    .sidebarGreeting {
+        padding: 8px 10px 4px 10px;
+        font-size: 1em;
+    }
+}
+
+/* Hide horizontal scroll bar but allow scrolling */
+.navbarBannerOptionsLeft::-webkit-scrollbar {
+    display: none;
 }
