@@ -100,7 +100,7 @@ const NavbarBanner = () => {
         </div>
         {
           options.map((item, ind) => (
-            <Link to={'/products'} className="optionsNavbarBanner" key={ind}>
+            <Link to={item.to || '/products'} className="optionsNavbarBanner" key={ind}>
               <div className="allOptionsNavbarBanner">{item.name}</div>
             </Link>
           ))
